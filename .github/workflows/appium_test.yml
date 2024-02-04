@@ -70,6 +70,6 @@ jobs:
           source venv/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt
-          python test_scripts/testnet_mobile_setup.py
+          python setup_appium.py
 #    - name: Send CSV data to slack
 #      run: python slack_app/send_test_reports.py
