@@ -39,8 +39,7 @@ jobs:
 
     - name: run emulator
       run: |
-        dir
-        cd /
+        cd C:/
         dir
         
 
