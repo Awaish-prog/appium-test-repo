@@ -39,14 +39,7 @@ jobs:
 
     - name: run emulator
       run: |
-        cd C:/Users
-        cd installer
-        dir
-        cd ../
-        cd Public
-        dir
-        cd ../
-        cd runneradmin
+        cd C:/Android
         dir
         
 
