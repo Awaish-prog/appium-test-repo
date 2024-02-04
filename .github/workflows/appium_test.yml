@@ -5,7 +5,7 @@ on: workflow_dispatch
 jobs:
   run-tests:
 
-    runs-on: macos-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
 
@@ -20,11 +20,11 @@ jobs:
 #        restore-keys: |
 #          ${{ runner.os }}-python-
 
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.11.7"
-        cache: 'pip'
+#    - name: Set up Python 3.11
+#      uses: actions/setup-python@v3
+#      with:
+#        python-version: "3.11.7"
+#        cache: 'pip'
 
     - name: Set up JDK
       uses: actions/setup-java@v3
@@ -32,24 +32,32 @@ jobs:
         distribution: 'oracle'
         java-version: '17'
 
-#    - name: Setup Android SDK
-#      uses: android-actions/setup-android@v3
-#      with:
-#        cmdline-tools-version: 10406996
-
-    - name: Set up Node js
-      uses: actions/setup-node@v4
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
       with:
-        node-version: 20
+        cmdline-tools-version: 10406996
 
-    - name: Install Appium
-      run: npm install -g appium
+    - name: run emulator
+      run: |
+        cd Users/runner/Library/Android/sdk
+        dir
+        cd emulator
+        dir
+        emulator -list-avds
 
-    - name: Install Appium animator
-      run: appium driver install uiautomator2
-
-    - name: Start Appium Server
-      run: appium &>/dev/null &
+#    - name: Set up Node js
+#      uses: actions/setup-node@v4
+#      with:
+#        node-version: 20
+#
+#    - name: Install Appium
+#      run: npm install -g appium
+#
+#    - name: Install Appium animator
+#      run: appium driver install uiautomator2
+#
+#    - name: Start Appium Server
+#      run: appium &>/dev/null &
 
 #    - name: Install appium driver
 #      run: appium driver install uiautomator2
