@@ -41,6 +41,7 @@ jobs:
       run: |
         cd C:/Android/android-sdk/emulator
         dir
+        emulator -list-avds
         
 
 #    - name: Set up Node js
