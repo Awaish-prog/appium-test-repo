@@ -39,7 +39,7 @@ jobs:
 
     - name: run emulator
       run: |
-        cd C:/Android/android-sdk
+        cd C:/Android/android-sdk/emulator
         dir
         
 
