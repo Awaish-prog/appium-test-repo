@@ -48,10 +48,10 @@ def find_element_recursive(driver, xpath, time_out, i):
         print("Clicking...")
         element.click()
     except NoSuchElementException:
-        print("retrying...")
+        print("retrying..., no such element")
         find_element_recursive(driver, xpath, time_out, i - 1)
     except:
-        print("retrying...")
+        print("retrying..., unknown")
         find_element_recursive(driver, xpath, time_out, i - 1)
 
 
@@ -71,7 +71,7 @@ def setup_testnet():
     # driver_meta_mask.install_app(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'meta-mask.apk'))
     # driver_meta_mask.activate_app("io.metamask")
     print("Opened app")
-    time.sleep(10)
+    time.sleep(60)
     find_element_recursive(driver_meta_mask, "//*[contains(@text,'Get started')]", 2, 15)
     # find_element_recursive(driver_meta_mask, "//*[contains(@text,'Import using Secret Recovery Phrase')]", 2, 15)
     WebDriverWait(driver_meta_mask, 30).until(ec.presence_of_element_located((AppiumBy.XPATH, "//*[contains(@text,'Import using Secret Recovery Phrase')]"))).click()
