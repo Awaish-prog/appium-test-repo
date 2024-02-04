@@ -29,7 +29,8 @@ capabilities_meta_mask = dict(
     language='en',
     locale='US',
     app=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'meta-mask.apk'),
-    newCommandTimeout=220000
+    newCommandTimeout=220000,
+    uiautomator2ServerInstallTimeout=220000
 )
 appium_server_url = 'http://127.0.0.1:4723'
 
@@ -72,7 +73,7 @@ def setup_testnet():
     # driver_meta_mask.install_app(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'meta-mask.apk'))
     # driver_meta_mask.activate_app("io.metamask")
     print("Opened app")
-    time.sleep(60)
+    time.sleep(30)
     # find_element_recursive(driver_meta_mask, "//*[contains(@text,'Get started')]", 2, 15)
     # find_element_recursive(driver_meta_mask, "//*[contains(@text,'Import using Secret Recovery Phrase')]", 2, 15)
     WebDriverWait(driver_meta_mask, 30).until(ec.presence_of_element_located(
