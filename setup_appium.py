@@ -72,7 +72,7 @@ def setup_testnet():
     # driver_meta_mask.install_app(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'meta-mask.apk'))
     # driver_meta_mask.activate_app("io.metamask")
     print("Opened app")
-    time.sleep(180)
+    time.sleep(60)
     # find_element_recursive(driver_meta_mask, "//*[contains(@text,'Get started')]", 2, 15)
     # find_element_recursive(driver_meta_mask, "//*[contains(@text,'Import using Secret Recovery Phrase')]", 2, 15)
     WebDriverWait(driver_meta_mask, 30).until(ec.presence_of_element_located(
