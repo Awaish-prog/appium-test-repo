@@ -26,9 +26,9 @@ capabilities_meta_mask = dict(
     platformName='Android',
     automationName='uiautomator2',
     deviceName='Android',
-    language='en',
-    locale='US',
-    app=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'meta-mask.apk'),
+    # language='en',
+    # locale='US',
+    # app=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'meta-mask.apk'),
     newCommandTimeout=220000,
     uiautomator2ServerInstallTimeout=220000
 )
@@ -70,8 +70,8 @@ def setup_testnet():
     # wait.until(ec.presence_of_element_located((by.XPATH, "//*[contains(text(), 'Login with Metamask')]")))
     # wait.until(ec.presence_of_element_located((by.XPATH, "//*[contains(text(), 'Login with Metamask')]"))).click()
     driver_meta_mask = webdriver.Remote(appium_server_url, options=UiAutomator2Options().load_capabilities(capabilities_meta_mask))
-    # driver_meta_mask.install_app(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'meta-mask.apk'))
-    # driver_meta_mask.activate_app("io.metamask")
+    driver_meta_mask.install_app(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'meta-mask.apk'))
+    driver_meta_mask.activate_app("io.metamask")
     print("Opened app")
     time.sleep(60)
     # find_element_recursive(driver_meta_mask, "//*[contains(@text,'Get started')]", 2, 15)

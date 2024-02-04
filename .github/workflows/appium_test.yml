@@ -2,12 +2,6 @@ name: Openfabric Testnet Test workflow
 
 on: workflow_dispatch
 
-env:
-  META_MASK_PHRASE: ${{ secrets.META_MASK_PHRASE }}
-  META_MASK_PASSWORD: ${{ secrets.META_MASK_PASSWORD }}
-  HEADLESS: ${{ secrets.HEADLESS }}
-  TESTNET_ADDRESS: ${{ secrets.TESTNET_ADDRESS }}
-  SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
 jobs:
   run-tests:
@@ -15,17 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-
-#    - name: Cache dependencies
-#      id: cache
-#      uses: actions/cache@v3
-#      with:
-#        path: |
-#          venv
-#          ~/.cache/pip
-#        key: ${{ runner.os }}-python-${{ hashFiles('requirements.txt') }}
-#        restore-keys: |
-#          ${{ runner.os }}-python-
 
     - name: Set up Python 3.11
       uses: actions/setup-python@v3
@@ -38,11 +21,6 @@ jobs:
       with:
         distribution: 'oracle'
         java-version: '17'
-
-#    - name: Setup Android SDK
-#      uses: android-actions/setup-android@v3
-#      with:
-#        cmdline-tools-version: 10406996
 
     - name: Set up Node js
       uses: actions/setup-node@v4
@@ -58,16 +36,6 @@ jobs:
     - name: Start Appium Server
       run: appium &>/dev/null &
 
-#    - name: Install appium driver
-#      run: appium driver install uiautomator2
-
-#    - name: Setup virtual environment
-#      run: |
-#
-#    - name: Install dependencies
-#      run: |
-
-
     - name: run tests
       uses: reactivecircus/android-emulator-runner@v2
       with:
@@ -78,5 +46,4 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
           python setup_appium.py
-#    - name: Send CSV data to slack
-#      run: python slack_app/send_test_reports.py
+
