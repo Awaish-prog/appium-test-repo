@@ -28,7 +28,8 @@ capabilities_meta_mask = dict(
     deviceName='Android',
     language='en',
     locale='US',
-    app=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'meta-mask.apk')
+    app=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'meta-mask.apk'),
+    newCommandTimeout=220000
 )
 appium_server_url = 'http://127.0.0.1:4723'
 
