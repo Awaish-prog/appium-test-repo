@@ -39,11 +39,9 @@ jobs:
 
     - name: run emulator
       run: |
-        cd /Users/runner/Library/Android/sdk
+        cd /Users
         dir
-        cd emulator
-        dir
-        emulator -list-avds
+        
 
 #    - name: Set up Node js
 #      uses: actions/setup-node@v4
