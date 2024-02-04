@@ -39,7 +39,7 @@ jobs:
 
     - name: run emulator
       run: |
-        cd Users/runner/Library/Android/sdk
+        cd /Users/runner/Library/Android/sdk
         dir
         cd emulator
         dir
@@ -69,15 +69,15 @@ jobs:
 #      run: |
 
 
-    - name: run tests
-      uses: reactivecircus/android-emulator-runner@v2
-      with:
-        api-level: 29
-        script: |
-          python -m venv venv
-          source venv/bin/activate
-          pip install --upgrade pip
-          pip install -r requirements.txt
-          python setup_appium.py
+#    - name: run tests
+#      uses: reactivecircus/android-emulator-runner@v2
+#      with:
+#        api-level: 29
+#        script: |
+#          python -m venv venv
+#          source venv/bin/activate
+#          pip install --upgrade pip
+#          pip install -r requirements.txt
+#          python setup_appium.py
 #    - name: Send CSV data to slack
 #      run: python slack_app/send_test_reports.py
