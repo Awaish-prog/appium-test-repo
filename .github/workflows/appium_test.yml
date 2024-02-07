@@ -39,8 +39,7 @@ jobs:
 
     - name: run emulator
       run: |
-        cd C:\
-        cd Users/installer/AppData/Local/Android
+        cd C:/Android/android-sdk
         dir
        
       
