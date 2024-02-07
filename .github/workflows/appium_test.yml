@@ -41,7 +41,11 @@ jobs:
       run: |
         cd C:\
         cd Users/runneradmin/AppData
+        dir
+        cd ../../../
         cd Users/installer/AppData
+        dir
+        cd ../../../
         cd Users/Public/AppData
       
         
