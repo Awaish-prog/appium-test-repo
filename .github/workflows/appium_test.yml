@@ -39,7 +39,7 @@ jobs:
 
     - name: run emulator
       run: |
-        cd C:/
+        cd C:/Android/android-sdk
         dir
         dir cmdline-tools/11.0
         dir platforms/android-34/data
