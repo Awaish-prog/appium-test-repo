@@ -39,13 +39,18 @@ jobs:
 
     - name: run emulator
       run: |
-        cd C:/Android/android-sdk/tools/bin
-        .\avdmanager create avd -n Pixel_3a_API_34_extension_level_7_x86_64 -k "system-images;android-34;google_apis;x86_64" --device "pixel_3a" --sdcard 512M
-        cd ../../
-        cd emulator
-        C:\Android\android-sdk\emulator\emulator -list-avds
-        C:\Android\android-sdk\emulator\emulator -avd Pixel_3a_API_34_extension_level_7_x86_64
-       
+        cd C:/Android/android-sdk
+        dir
+        cd  tools
+        dir
+        cd bin
+        dir
+#        .\avdmanager create avd -n Pixel_3a_API_34_extension_level_7_x86_64 -k "system-images;android-34;google_apis;x86_64" --device "pixel_3a" --sdcard 512M
+#        cd ../../
+#        cd emulator
+#        C:\Android\android-sdk\emulator\emulator -list-avds
+#        C:\Android\android-sdk\emulator\emulator -avd Pixel_3a_API_34_extension_level_7_x86_64
+#
       
         
 
