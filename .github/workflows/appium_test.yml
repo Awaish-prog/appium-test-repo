@@ -39,7 +39,7 @@ jobs:
 
     - name: run emulator
       run: |
-        cd C:/Android/android-sdk/tools
+        cd C:/Android/android-sdk/tools/bin
         dir
 #        C:\Android\android-sdk\emulator\emulator -avd Pixel_3a_API_34_extension_level_7_x86_64
        
