@@ -40,11 +40,10 @@ jobs:
     - name: run emulator
       run: |
         cd C:\
-        dir Users/installer
-        dir Users/Public
-        dir Users/runneradmin
-        dir Android/android-sdk
-        dir Microsoft/AndroidNDK
+        cd Users/runneradmin/AppData
+        cd Users/installer/AppData
+        cd Users/Public/AppData
+      
         
 
 
