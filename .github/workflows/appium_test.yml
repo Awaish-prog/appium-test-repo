@@ -40,13 +40,12 @@ jobs:
     - name: run emulator
       run: |
         cd C:\
-        cd Users/runneradmin/AppData
+        cd Users/runneradmin/AppData/Local
         dir
-        cd ../../../
-        cd Users/installer/AppData
+        cd ../../../../
+        cd Users/installer/AppData/Local
         dir
-        cd ../../../
-        cd Users/Public/AppData
+       
       
         
 
