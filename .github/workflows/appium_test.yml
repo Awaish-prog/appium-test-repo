@@ -43,6 +43,7 @@ jobs:
         dir
         dir build-tools/34.0.0
         dir platforms/android-34
+        dir platforms/android-34/data
         dir tools
 
 #        .\avdmanager create avd -n Pixel_3a_API_34_extension_level_7_x86_64 -k "system-images;android-34;google_apis;x86_64" --device "pixel_3a" --sdcard 512M
