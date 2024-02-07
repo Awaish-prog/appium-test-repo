@@ -40,7 +40,11 @@ jobs:
     - name: run emulator
       run: |
         cd C:\
-        dir
+        dir Users
+        dir Android
+        dir Julia
+        dir Microsoft
+        dir Windows
         
 
 #    - name: Set up Node js
