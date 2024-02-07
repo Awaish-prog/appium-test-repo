@@ -33,12 +33,21 @@ jobs:
         java-version: '17'
 
     - name: Setup Android SDK
-      run: winget install Google.AndroidStudio
+      uses: android-actions/setup-android@v3
+      with:
+        cmdline-tools-version: 10406996
 
     - name: run emulator
       run: |
         cd C:/
-        
+        dir
+        dir cmdline-tools/11.0
+        dir platforms/android-34/data
+        dir platforms/android-34/optional
+        dir platforms/android-34/skins
+        dir platforms/android-34/templates
+        dir platforms/android-34
+        dir tools
 
 #        .\avdmanager create avd -n Pixel_3a_API_34_extension_level_7_x86_64 -k "system-images;android-34;google_apis;x86_64" --device "pixel_3a" --sdcard 512M
 #        cd ../../
