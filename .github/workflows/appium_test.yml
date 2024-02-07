@@ -39,15 +39,16 @@ jobs:
 
     - name: run emulator
       run: |
+        $rootDirectory = 'C:\Android\android-sdk'
+        $folderName = 'google_apis'
+        $folders = Get-ChildItem -Path $rootDirectory -Filter $folderName -Directory -Recurse -ErrorAction SilentlyContinue
+        $folders
+
 #        cd C:/Android/android-sdk
 #        dir
 #        dir build-tools/34.0.0
 #        dir platforms/android-34
 #        dir tools
-        $rootDirectory = 'C:\Android\android-sdk'
-        $folderName = 'google_apis'
-        $folders = Get-ChildItem -Path $rootDirectory -Filter $folderName -Directory -Recurse -ErrorAction SilentlyContinue
-        $folders
 
 #        .\avdmanager create avd -n Pixel_3a_API_34_extension_level_7_x86_64 -k "system-images;android-34;google_apis;x86_64" --device "pixel_3a" --sdcard 512M
 #        cd ../../
