@@ -39,9 +39,9 @@ jobs:
 
     - name: run emulator
       run: |
-        cd C:\Android\android-sdk\emulator
+        cd C:\
         dir
-        emulator -list-avds
+        
 
 #    - name: Set up Node js
 #      uses: actions/setup-node@v4
