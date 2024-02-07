@@ -48,7 +48,7 @@ jobs:
         $acl = Get-Acl $file
         $acl.Access
         cd C:/Android/android-sdk/emulator
-        emulator -list-avds
+        & "C:\Android\android-sdk\emulator\emulator" -list-avds
        
       
         
