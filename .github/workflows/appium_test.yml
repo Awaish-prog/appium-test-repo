@@ -40,12 +40,13 @@ jobs:
     - name: run emulator
       run: |
         cd C:\
-        dir Users
-        dir Android
-        dir Julia
-        dir Microsoft
-        dir Windows
+        dir Users/installer
+        dir Users/Public
+        dir Users/runneradmin
+        dir Android/android-sdk
+        dir Microsoft/AndroidNDK
         
+
 
 #    - name: Set up Node js
 #      uses: actions/setup-node@v4
