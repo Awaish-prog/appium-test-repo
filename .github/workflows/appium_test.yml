@@ -39,14 +39,6 @@ jobs:
 
     - name: run emulator
       run: |
-        $file = "C:\Android\android-sdk\emulator\emulator.exe"
-        $permissions = "ReadAndExecute"
-        $acl = Get-Acl $file
-        $rule = New-Object System.Security.AccessControl.FileSystemAccessRule("Everyone", $permissions, "Allow")
-        $acl.SetAccessRule($rule)
-        Set-Acl -Path $file -AclObject $acl
-        $acl = Get-Acl $file
-        $acl.Access
         cd C:/Android/android-sdk/emulator
         C:\Android\android-sdk\emulator\emulator -list-avds
        
