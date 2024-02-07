@@ -40,7 +40,7 @@ jobs:
     - name: run emulator
       run: |
         $rootDirectory = 'C:\Android\android-sdk'
-        $folderName = 'google_apis'
+        $folderName = 'system-images'
         $folders = Get-ChildItem -Path $rootDirectory -Filter $folderName -Directory -Recurse -ErrorAction SilentlyContinue
         $folders
 
