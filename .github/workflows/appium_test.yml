@@ -39,7 +39,14 @@ jobs:
 
     - name: run emulator
       run: |
-        icacls "C:\Android\android-sdk\emulator\emulator.exe" /grant:r "*S-1-1-0":(RX)
+        $file = "C:\Android\android-sdk\emulator\emulator.exe"
+        $permissions = "ReadAndExecute"
+        $acl = Get-Acl $file
+        $rule = New-Object System.Security.AccessControl.FileSystemAccessRule("Everyone", $permissions, "Allow")
+        $acl.SetAccessRule($rule)
+        Set-Acl -Path $file -AclObject $acl
+        $acl = Get-Acl $file
+        $acl.Access
         cd C:/Android/android-sdk/emulator
         emulator -list-avds
        
