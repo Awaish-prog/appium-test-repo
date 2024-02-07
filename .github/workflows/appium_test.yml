@@ -40,9 +40,6 @@ jobs:
     - name: run emulator
       run: |
         cd C:\
-        cd Users/runneradmin/AppData/Local/Android
-        dir
-        cd ../../../../../
         cd Users/installer/AppData/Local/Android
         dir
        
